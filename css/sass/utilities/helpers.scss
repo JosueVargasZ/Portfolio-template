@@ -1,0 +1,23 @@
+//==================== Global variables====================
+$lightPalette : (
+    'primary' : #003C57,
+    'secondary' : #E89B26,
+    'accent': #00BCFF,
+    'accent-light': lighten(#00BCFF, 80%),
+    'bg': #F1F1E6,
+    'text': #434343
+);
+
+// This function get the color of the map $lightPalette
+@function setColor( $color ){
+    @return map-get($lightPalette , $color ) 
+};
+
+
+// Mixin for styling buttons
+@mixin buttons {
+    background-color: setColor(secondary);
+    color: #ffffff;
+    padding: 0.75em;
+    
+}
