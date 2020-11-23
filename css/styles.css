@@ -9,19 +9,21 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
-  /*
-  //TODO: set to DESKTOP size media query
-  width: 100%;
-  height: 100vh;
   background-blend-mode: multiply;
-  background-image: url('../assets/hero.jpg');
+  background: url("../assets/bg_color.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
-  background-color: setColor(primary);
-  opacity: 0.87;
-  */
+  background-color: #003C57;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -29,23 +31,102 @@ header {
 }
 header nav {
   background-color: #003C57;
-  flex-basis: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 40px;
-  padding: 0 0.5rem;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-header nav a {
+header nav #logo {
+  padding: 0 0.5rem;
   color: #ffffff;
-  text-decoration: none;
   font-family: "Bitter", serif;
   font-weight: 900;
-  font-size: 1.65rem;
+  font-size: 1.54rem;
 }
-header nav ul {
-  display: none;
+header nav #menu-toggle {
+  position: relative;
+  flex-basis: 20%;
+  text-align: right;
+}
+header nav #menu-toggle input[type=checkbox] {
+  margin: 5px 0.5rem 0 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0;
+}
+header nav #menu-toggle #toggler {
+  top: 17.5px;
+  right: 0.5rem;
+  width: 30px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  pointer-events: none;
+}
+header nav #menu-toggle #toggler::before, header nav #menu-toggle #toggler::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
+  pointer-events: none;
+}
+header nav #menu-toggle #toggler::before {
+  top: -11px;
+}
+header nav #menu-toggle #toggler::after {
+  top: 11px;
+}
+header nav #menu-toggle input[type=checkbox]:checked + #toggler {
+  transform: rotate(45deg);
+}
+header nav #menu-toggle input[type=checkbox]:checked + #toggler::before, header nav #menu-toggle input[type=checkbox]:checked + #toggler::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header nav #menu {
+  background-color: #003C57;
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 1rem 0;
+  visibility: hidden;
+}
+header nav #menu li {
+  cursor: pointer;
+  height: 30px;
+  list-style: none;
+}
+header nav #menu li a {
+  text-align: center;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  line-height: 30px;
+  transition: color 400ms;
+}
+header nav #menu li:first-child a {
+  color: #E89B26;
+}
+header nav #menu li:hover a {
+  color: #E89B26;
 }
 header #hero {
   flex-basis: 100%;
-  height: calc(100vh - 40px);
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
@@ -55,7 +136,7 @@ header #hero {
 }
 header #hero h1 {
   max-width: 20ch;
-  color: #003C57;
+  color: #ffffff;
   font-family: "Bitter", serif;
   font-size: 1.65rem;
   font-weight: 800;

@@ -3,53 +3,138 @@
 
 
 
-
-
 header{
 
-    /*
-    //TODO: set to DESKTOP size media query
-    width: 100%;
-    height: 100vh;
     background-blend-mode: multiply;
-    background-image: url('../assets/hero.jpg');
+    background: url('../assets/bg_color.jpg') fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 40%;
-    background-color: setColor(primary);
-    opacity: 0.87;
-    */
-
+    background-color: helpers.setColor(primary);
     width: 100%;
     height: 100vh;
-    // background-color: setColor(primary);
     display: flex;
     flex-flow: row wrap;
-    // clip-path: polygon(100% 0, 100% 80%, 0 40%, 0 0);
 
     nav{
-
         background-color: helpers.setColor(primary);
-        flex-basis: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         height: 40px;
-        padding: 0 0.50rem;
+        z-index: 2;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
 
-        a{
+        #logo{
+            padding: 0 0.50rem;
             color: #ffffff;
-            text-decoration: none;
             font-family: 'Bitter', serif;
             font-weight: 900;
-            font-size: 1.65rem;
+            font-size: 1.54rem;
         }
 
-        ul{
-            display: none;
+        #menu-toggle{
+            position: relative;
+            flex-basis: 20%;
+            text-align: right;
+            
+            input[type="checkbox"]{
+                margin: 5px 0.50rem 0 0;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                opacity: 0;
+            }
+
+            #toggler{
+                top: 17.5px;
+                right: 0.50rem;
+                width: 30px;
+                height: 5px;
+                display: block;
+                position: absolute;
+                background-color: #ffffff;
+                pointer-events: none;
+
+                &::before,
+                &::after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 30px;
+                    height: 5px;
+                    background-color: #ffffff;
+                    pointer-events: none;            
+                }
+                
+                &::before{
+                    top: -11px;
+                }
+
+                &::after{
+                    top: 11px;
+                }
+            }
+
+            input[type="checkbox"]:checked + #toggler{
+                // TODO: Animate
+                transform: rotate(45deg);
+                &::before,
+                &::after{
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        #menu{
+            background-color: helpers.setColor(primary);
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            padding: 1rem 0;
+            visibility: hidden;
+
+
+            li{
+                cursor: pointer;
+                height: 30px;
+                list-style: none;
+
+
+                a{
+                    text-align: center;
+                    display: block;
+                    font-family: 'Roboto', sans-serif;
+                    color: #ffffff;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    padding: 0 0.50rem;
+                    line-height: 30px;
+                    transition: color 400ms;
+                }
+
+                &:first-child a{ //TODO: Delete
+                    color: helpers.setColor(secondary);
+                }
+
+                &:hover{
+                    a{
+                        color: helpers.setColor(secondary);
+                    }
+                }
+            }
         }
     }
 
     #hero{
         flex-basis: 100%;
-        height: calc(100vh - 40px);
+        height: 100vh;
         display: flex;
         flex-flow: column wrap;
         align-content: center;
@@ -59,7 +144,7 @@ header{
 
         h1{
             max-width: 20ch;
-            color: helpers.setColor(primary);
+            color: #ffffff;
             font-family: 'Bitter', serif;
             font-size: 1.65rem;
             font-weight: 800;
