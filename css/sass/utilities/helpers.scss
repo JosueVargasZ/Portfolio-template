@@ -1,18 +1,21 @@
-//==================== Global variables====================
+//==================== Global variables ====================
 $lightPalette : (
     'primary' : #003C57,
     'secondary' : #E89B26,
     'accent': #00BCFF,
     'accent-light': lighten(#00BCFF, 80%),
     'bg': #F1F1E6,
-    'text': #434343
+    'text-color': #434343
 );
+
+//==================== Functions ====================
 
 // This function get the color of the map $lightPalette
 @function setColor( $color ){
     @return map-get($lightPalette , $color ) 
 };
 
+//==================== Mixins ====================
 
 // Mixin for styling buttons
 @mixin buttons {
@@ -21,3 +24,5 @@ $lightPalette : (
     padding: 0.75em;
     
 }
+
+//==================== Animations ====================

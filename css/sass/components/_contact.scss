@@ -1,0 +1,6 @@
+@use '../utilities/helpers.scss' as helpers;
+
+
+#contact-section{
+    background-color: helpers.setColor(bg);
+}

@@ -1,168 +1,23 @@
 @use './basics/base';
-@use './utilities/helpers.scss' as helpers;
+@use './animations/animations';
 
 
+/*==================== Header Component====================*/
 
-header{
+@use './components/header';
 
-    background-blend-mode: multiply;
-    background: url('../assets/bg_color.jpg') fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 40%;
-    background-color: helpers.setColor(primary);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-flow: row wrap;
+/*==================== About Component====================*/
 
-    nav{
-        background-color: helpers.setColor(primary);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 40px;
-        z-index: 2;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
+@use './components/about';
 
-        #logo{
-            padding: 0 0.50rem;
-            color: #ffffff;
-            font-family: 'Bitter', serif;
-            font-weight: 900;
-            font-size: 1.54rem;
-        }
+/*==================== Projects Component====================*/
 
-        #menu-toggle{
-            position: relative;
-            flex-basis: 20%;
-            text-align: right;
-            
-            input[type="checkbox"]{
-                margin: 5px 0.50rem 0 0;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                opacity: 0;
-            }
+@use './components/projects';
 
-            #toggler{
-                top: 17.5px;
-                right: 0.50rem;
-                width: 30px;
-                height: 5px;
-                display: block;
-                position: absolute;
-                background-color: #ffffff;
-                pointer-events: none;
+/*==================== Contact Component====================*/
 
-                &::before,
-                &::after{
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    width: 30px;
-                    height: 5px;
-                    background-color: #ffffff;
-                    pointer-events: none;            
-                }
-                
-                &::before{
-                    top: -11px;
-                }
+@use './components/contact';
 
-                &::after{
-                    top: 11px;
-                }
-            }
+/*==================== Footer Component====================*/
 
-            input[type="checkbox"]:checked + #toggler{
-                // TODO: Animate
-                transform: rotate(45deg);
-                &::before,
-                &::after{
-                    top: 0;
-                    transform: rotate(90deg);
-                }
-            }
-        }
-
-        #menu{
-            background-color: helpers.setColor(primary);
-            flex-basis: 100%;
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            padding: 1rem 0;
-            visibility: hidden;
-
-
-            li{
-                cursor: pointer;
-                height: 30px;
-                list-style: none;
-
-
-                a{
-                    text-align: center;
-                    display: block;
-                    font-family: 'Roboto', sans-serif;
-                    color: #ffffff;
-                    font-size: 1.125rem;
-                    font-weight: 500;
-                    padding: 0 0.50rem;
-                    line-height: 30px;
-                    transition: color 400ms;
-                }
-
-                &:first-child a{ //TODO: Delete
-                    color: helpers.setColor(secondary);
-                }
-
-                &:hover{
-                    a{
-                        color: helpers.setColor(secondary);
-                    }
-                }
-            }
-        }
-    }
-
-    #hero{
-        flex-basis: 100%;
-        height: 100vh;
-        display: flex;
-        flex-flow: column wrap;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-        gap: 1rem;
-
-        h1{
-            max-width: 20ch;
-            color: #ffffff;
-            font-family: 'Bitter', serif;
-            font-size: 1.65rem;
-            font-weight: 800;
-            line-height: 0.99;
-
-            strong{
-                font-weight: 900;
-                color: helpers.setColor(secondary);
-            }
-        }
-
-        a{
-            margin: 0 auto;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            @include helpers.buttons;
-        }
-    }
-
-}
+@use './components/footer';

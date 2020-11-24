@@ -3,8 +3,8 @@ let menu = document.querySelector('#menu');
 
 toggle.addEventListener('change', ()=> {
     if( toggle.checked){
-        menu.style.visibility = 'visible'
+        menu.style = 'animation: menu-in 400ms ease-in-out forwards';
     }else{
-        menu.style.visibility = 'hidden'
+        menu.style = 'animation: menu-out 400ms ease-in-out forwards';
     }
 })
