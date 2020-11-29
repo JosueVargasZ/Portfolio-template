@@ -3,7 +3,7 @@ $lightPalette : (
     'primary' : #003C57,
     'secondary' : #E89B26,
     'accent': #00BCFF,
-    'accent-light': lighten(#00BCFF, 80%),
+    'accent-light': lighten(#00BCFF, 30%),
     'bg': #F1F1E6,
     'text-color': #434343
 );
@@ -20,8 +20,15 @@ $lightPalette : (
 // Mixin for styling buttons
 @mixin buttons {
     background-color: setColor(secondary);
+    font-weight: 700;
     color: #ffffff;
     padding: 0.75em;
+    border: none;
+    transition: background 400ms ease-in-out;
+    &:focus,
+    &:hover{
+        background-color: lighten(setColor( secondary),5%);
+    }
     
 }
 

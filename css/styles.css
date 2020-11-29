@@ -1,6 +1,5 @@
 /*==================== General styling====================*/
 /*==================== Import fonts====================*/
-@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 /*==================== Global ====================*/
 * {
@@ -203,8 +202,14 @@ header #hero a {
   text-transform: uppercase;
   font-weight: bold;
   background-color: #E89B26;
+  font-weight: 700;
   color: #ffffff;
   padding: 0.75em;
+  border: none;
+  transition: background 400ms ease-in-out;
+}
+header #hero a:focus, header #hero a:hover {
+  background-color: #eaa63d;
 }
 header #hero a i {
   font-size: 1rem;
@@ -328,9 +333,15 @@ header #hero a:hover i, header #hero a:focus i {
 }
 #projects-section #project-grid .project-card figure figcaption a {
   background-color: #E89B26;
+  font-weight: 700;
   color: #ffffff;
   padding: 0.75em;
+  border: none;
+  transition: background 400ms ease-in-out;
   letter-spacing: 1px;
+}
+#projects-section #project-grid .project-card figure figcaption a:focus, #projects-section #project-grid .project-card figure figcaption a:hover {
+  background-color: #eaa63d;
 }
 #projects-section #project-grid .project-card figure figcaption a i {
   transition: transform 400ms ease-in-out;
@@ -341,6 +352,88 @@ header #hero a:hover i, header #hero a:focus i {
 
 #contact-section {
   background-color: #F1F1E6;
+}
+#contact-section #contact {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem 0 0.5rem;
+  gap: 1.3rem;
+  text-align: center;
+}
+#contact-section #contact h3 {
+  font-size: 1.3rem;
+  color: #E89B26;
+}
+#contact-section #contact form {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: center;
+  row-gap: 0.75rem;
+}
+#contact-section #contact form input[type=text],
+#contact-section #contact form textarea {
+  grid-column: 1/3;
+  padding-left: 10px;
+  color: #434343;
+}
+#contact-section #contact form input[type=text] {
+  height: 30px;
+}
+#contact-section #contact form button {
+  grid-column: 2/3;
+  background-color: #E89B26;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0.75em;
+  border: none;
+  transition: background 400ms ease-in-out;
+}
+#contact-section #contact form button:focus, #contact-section #contact form button:hover {
+  background-color: #eaa63d;
+}
+
+footer {
+  background-color: #003C57;
+  padding: 3rem 0.5rem 2rem 0.5rem;
+  position: relative;
+}
+footer a {
+  color: #99e4ff;
+  transition: color 400ms ease-in-out;
+}
+footer a i {
+  font-size: 2rem;
+}
+footer a:hover, footer a:focus {
+  color: #00BCFF;
+}
+footer nav {
+  padding-bottom: 2rem;
+}
+footer nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer nav ul li {
+  list-style: none;
+}
+footer #arrow-home {
+  color: #ffffff;
+  position: absolute;
+  bottom: 26px;
+  right: 8px;
+}
+footer #arrow-home:hover, footer #arrow-home:focus {
+  color: #E89B26;
+}
+footer h4 {
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1.3px;
 }
 
 /*==================== Header Component====================*/
