@@ -25,6 +25,11 @@ main section .section-title {
   font-weight: 700;
   color: #003C57;
 }
+@media only screen and (min-width: 1024px) {
+  main section .section-title {
+    font-size: 4rem;
+  }
+}
 
 a {
   text-decoration: none;
@@ -133,6 +138,11 @@ header nav #menu-toggle #menu-check:focus ~ #toggler::before,
 header nav #menu-toggle #menu-check:focus ~ #toggler::after {
   background-color: #E89B26;
 }
+@media only screen and (min-width: 768px) {
+  header nav #menu-toggle {
+    display: none;
+  }
+}
 header nav #menu {
   background-color: #003C57;
   flex-basis: 100%;
@@ -167,6 +177,28 @@ header nav #menu li:first-child a {
 header nav #menu li:hover a {
   color: #E89B26;
 }
+@media only screen and (min-width: 768px) {
+  header nav #menu {
+    visibility: visible;
+    flex-basis: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header nav #menu {
+    justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header nav {
+    justify-content: center;
+  }
+}
 header #hero {
   flex-basis: 100%;
   height: 100vh;
@@ -188,6 +220,26 @@ header #hero h1 {
 header #hero h1 strong {
   font-weight: 900;
   color: #E89B26;
+}
+@media only screen and (min-width: 375px) {
+  header #hero h1 {
+    font-size: 1.85rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  header #hero h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header #hero h1 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header #hero h1 {
+    font-size: 4rem;
+  }
 }
 header #hero a {
   margin: 0 auto;
@@ -211,6 +263,14 @@ header #hero a i {
 header #hero a:hover i, header #hero a:focus i {
   transform: rotate(90deg);
 }
+@media only screen and (min-width: 1024px) {
+  header #hero a {
+    font-size: 1.125rem;
+  }
+  header #hero a i {
+    font-size: 1.125rem;
+  }
+}
 
 #about-section {
   background-color: #F1F1E6;
@@ -230,6 +290,11 @@ header #hero a:hover i, header #hero a:focus i {
   text-align: center;
   color: #E89B26;
 }
+@media only screen and (min-width: 768px) {
+  #about-section .about-col {
+    flex-basis: 45%;
+  }
+}
 #about-section .profile figure {
   text-align: center;
 }
@@ -246,10 +311,15 @@ header #hero a:hover i, header #hero a:focus i {
   color: #434343;
   max-width: 40ch;
 }
+@media only screen and (min-width: 1024px) {
+  #about-section .profile p {
+    font-size: 1.225rem;
+  }
+}
 #about-section .skills .skill-bar {
   display: flex;
   flex-flow: row wrap;
-  width: 300px;
+  width: 90%;
 }
 #about-section .skills .skill-bar-header {
   flex-basis: 30%;
@@ -263,6 +333,39 @@ header #hero a:hover i, header #hero a:focus i {
   color: #ffffff;
   text-align: right;
   padding-right: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  #about-section .skills .skill-bar {
+    width: 100%;
+  }
+  #about-section .skills .skill-bar-header, #about-section .skills .skill-bar-level {
+    height: 25px;
+    line-height: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #about-section .skills .skill-bar-header, #about-section .skills .skill-bar-level {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #about-section .skills {
+    gap: 1.3rem;
+  }
+  #about-section .skills h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #about-section {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #about-section .section-title {
+    flex-basis: 100%;
+  }
 }
 
 #projects-section {

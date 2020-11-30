@@ -19,6 +19,10 @@
             text-align: center;
             color: helpers.setColor(secondary);
         }
+
+    @include helpers.media(helpers.$tablet){
+        flex-basis: 45%;    
+    }
     }
 
     .profile{
@@ -38,6 +42,10 @@
             line-height: 1.6;
             color: helpers.setColor(text-color);
             max-width: 40ch;
+
+            @include helpers.media(helpers.$desktop){
+                font-size: 1.225rem;
+            }
         }
 
     }
@@ -47,7 +55,7 @@
         .skill-bar{
             display: flex;
             flex-flow: row wrap;
-            width: 300px;
+            width: 90%;
             &-header{
                 flex-basis: 30%;
                 text-align: center;
@@ -62,6 +70,42 @@
                 padding-right: 0.50rem;
             }
 
+            @include helpers.media(helpers.$tablet){
+                width: 100%;
+                
+                &-header,
+                &-level{
+                    height: 25px;
+                    line-height: 25px;
+                }
+            }
+
+            @include helpers.media(helpers.$desktop){
+                
+                &-header,
+                &-level{
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+
+        }
+        
+        @include helpers.media(helpers.$tablet){
+            h2{
+                margin-bottom: 1.5rem;
+            }
+            gap: 1.3rem;
+        }
+    }
+
+    @include helpers.media(helpers.$tablet){
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: center;
+
+        .section-title{
+            flex-basis: 100%;
         }
     }
     

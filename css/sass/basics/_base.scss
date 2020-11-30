@@ -29,6 +29,10 @@ main{
             font-size: 3rem;
             font-weight: 700;
             color: helpers.setColor(primary);
+
+            @include helpers.media(helpers.$desktop){
+                font-size: 4rem;
+            }
         }
     }
 }
