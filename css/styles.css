@@ -84,18 +84,18 @@ header nav #menu-toggle {
   z-index: 2;
 }
 header nav #menu-toggle input[type=checkbox] {
-  margin: 15px 0.5rem 0 0;
-  width: 30px;
-  height: 30px;
+  margin: 10px 0.5rem 0 0;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   opacity: 0;
 }
 header nav #menu-toggle #toggler {
   position: absolute;
-  top: 27.5px;
+  top: 26px;
   right: 0.5rem;
-  width: 30px;
-  height: 5px;
+  width: 40px;
+  height: 8px;
   display: block;
   background-color: #ffffff;
   pointer-events: none;
@@ -105,17 +105,17 @@ header nav #menu-toggle #toggler::before, header nav #menu-toggle #toggler::afte
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 5px;
+  width: 40px;
+  height: 8px;
   background-color: #ffffff;
   pointer-events: none;
   transition: transform 400ms ease-in-out, top 400ms ease-in-out, background 400ms ease-in-out;
 }
 header nav #menu-toggle #toggler::before {
-  top: -11px;
+  top: -17px;
 }
 header nav #menu-toggle #toggler::after {
-  top: 11px;
+  top: 17px;
 }
 header nav #menu-toggle #menu-check:checked + #toggler {
   transform: rotate(135deg);
@@ -152,7 +152,7 @@ header nav #menu li a {
   display: block;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-size: 1.125rem;
+  font-size: 1.225rem;
   font-weight: 500;
   padding: 0 0.5rem;
   line-height: 30px;

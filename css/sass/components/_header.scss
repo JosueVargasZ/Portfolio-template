@@ -34,19 +34,19 @@ header{
             z-index: 2;
             
             input[type="checkbox"]{
-                margin: 15px 0.50rem 0 0;
-                width: 30px;
-                height: 30px;
+                margin: 10px 0.50rem 0 0;
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
                 opacity: 0;
             }
 
             #toggler{
                 position: absolute;
-                top: 27.5px;
+                top: 26px;
                 right: 0.50rem;
-                width: 30px;
-                height: 5px;
+                width: 40px;
+                height: 8px;
                 display: block;
                 background-color: #ffffff;
                 pointer-events: none;
@@ -57,19 +57,19 @@ header{
                     content: '';
                     position: absolute;
                     display: block;
-                    width: 30px;
-                    height: 5px;
+                    width: 40px;
+                    height: 8px;
                     background-color: #ffffff;
                     pointer-events: none;
                     transition: transform 400ms ease-in-out, top 400ms ease-in-out, background 400ms ease-in-out;
                 }
                 
                 &::before{
-                    top: -11px;
+                    top: -17px;
                 }
 
                 &::after{
-                    top: 11px;
+                    top: 17px;
                 }
 
                 
@@ -116,7 +116,7 @@ header{
                     display: block;
                     font-family: 'Roboto', sans-serif;
                     color: #ffffff;
-                    font-size: 1.125rem;
+                    font-size: 1.225rem;
                     font-weight: 500;
                     padding: 0 0.50rem;
                     line-height: 30px;
