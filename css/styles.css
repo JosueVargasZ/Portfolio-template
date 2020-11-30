@@ -354,7 +354,7 @@ header #hero a:hover i, header #hero a:focus i {
   text-align: center;
 }
 #contact-section #contact h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #E89B26;
 }
 #contact-section #contact form {
@@ -362,7 +362,7 @@ header #hero a:hover i, header #hero a:focus i {
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: center;
-  row-gap: 0.75rem;
+  row-gap: 1rem;
 }
 #contact-section #contact form input[type=text],
 #contact-section #contact form textarea {
@@ -371,7 +371,7 @@ header #hero a:hover i, header #hero a:focus i {
   color: #434343;
 }
 #contact-section #contact form input[type=text] {
-  height: 30px;
+  height: 40px;
 }
 #contact-section #contact form button {
   grid-column: 2/3;
@@ -388,7 +388,7 @@ header #hero a:hover i, header #hero a:focus i {
 
 footer {
   background-color: #003C57;
-  padding: 3rem 0.5rem 2rem 0.5rem;
+  padding: 4rem 0.5rem 2rem 0.5rem;
   position: relative;
 }
 footer a {
@@ -396,7 +396,7 @@ footer a {
   transition: color 400ms ease-in-out;
 }
 footer a i {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 footer a:hover, footer a:focus {
   color: #00BCFF;
