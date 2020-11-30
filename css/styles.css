@@ -14,7 +14,7 @@ html {
 }
 
 main section {
-  padding: 3.5rem 0 2rem 0;
+  padding: 4.5rem 0 2rem 0;
   width: 100%;
   min-height: 100vh;
 }
@@ -69,41 +69,34 @@ header nav {
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 60px;
   z-index: 2;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-header nav #logo {
-  padding: 0 0.5rem;
-  color: #ffffff;
-  font-family: "Bitter", serif;
-  font-weight: 900;
-  font-size: 1.54rem;
-  z-index: 2;
 }
 header nav #menu-toggle {
   position: relative;
   flex-basis: 20%;
+  height: 100%;
   text-align: right;
   z-index: 2;
 }
 header nav #menu-toggle input[type=checkbox] {
-  margin: 5px 0.5rem 0 0;
+  margin: 15px 0.5rem 0 0;
   width: 30px;
   height: 30px;
   cursor: pointer;
   opacity: 0;
 }
 header nav #menu-toggle #toggler {
-  top: 17.5px;
+  position: absolute;
+  top: 27.5px;
   right: 0.5rem;
   width: 30px;
   height: 5px;
   display: block;
-  position: absolute;
   background-color: #ffffff;
   pointer-events: none;
   transition: transform 400ms ease-in-out, background 400ms ease-in-out;
@@ -356,7 +349,7 @@ header #hero a:hover i, header #hero a:focus i {
 #contact-section #contact {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0.5rem 0 0.5rem;
+  padding: 2rem 0.5rem 0 0.5rem;
   gap: 1.3rem;
   text-align: center;
 }

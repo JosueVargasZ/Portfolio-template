@@ -2,7 +2,6 @@
 
 
 header{
-
     background-blend-mode: multiply;
     background: url('../assets/bg_color.jpg') fixed;
     background-repeat: no-repeat;
@@ -20,30 +19,22 @@ header{
         top: 0;
         left: 0;
         right: 0;
-        height: 40px;
+        height: 60px;
         z-index: 2;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-
-        #logo{
-            padding: 0 0.50rem;
-            color: #ffffff;
-            font-family: 'Bitter', serif;
-            font-weight: 900;
-            font-size: 1.54rem;
-            z-index: 2;
-        }
 
         #menu-toggle{
             position: relative;
             flex-basis: 20%;
+            height: 100%;
             text-align: right;
             z-index: 2;
             
             input[type="checkbox"]{
-                margin: 5px 0.50rem 0 0;
+                margin: 15px 0.50rem 0 0;
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
@@ -51,12 +42,12 @@ header{
             }
 
             #toggler{
-                top: 17.5px;
+                position: absolute;
+                top: 27.5px;
                 right: 0.50rem;
                 width: 30px;
                 height: 5px;
                 display: block;
-                position: absolute;
                 background-color: #ffffff;
                 pointer-events: none;
                 transition: transform 400ms ease-in-out, background 400ms ease-in-out;
