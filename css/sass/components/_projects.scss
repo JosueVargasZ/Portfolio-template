@@ -10,7 +10,19 @@
         display: grid;
         gap: 1rem;
         grid-template-columns: 90%;
+        grid-template-rows: max-content;
         justify-content: center;
+        align-items: flex-start;
+
+        @include helpers.media(helpers.$tablet){
+            grid-template-columns: repeat(2,calc(45% - 0.50rem));
+        }
+
+        @include helpers.media(helpers.$desktop){
+            grid-template-columns: repeat(3,calc(30% - 0.50rem));
+        }
+
+        
 
         .project-card{
             width: 100%;
